@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import PkaScale from "@/components/PkaScale";
 import { Beaker } from "lucide-react";
 
 const PkaFromPh = () => {
