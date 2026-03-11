@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import PkaScale from "@/components/PkaScale";
 import { FlaskConical } from "lucide-react";
 
 const PkaFromKa = () => {
@@ -141,9 +142,7 @@ const PkaFromKa = () => {
               {mode === "ka-to-pka" ? result.ka.toExponential(4) : result.pka.toFixed(4)}
             </p>
           </div>
-          <div className="text-xs text-muted-foreground">
-            {result.pka < 0 ? "⚡ Very strong acid" : result.pka < 4 ? "🔴 Strong acid" : result.pka < 7 ? "🟡 Moderate acid" : "🟢 Weak acid"}
-          </div>
+          <PkaScale value={result.pka} />
         </div>
       )}
     </div>
